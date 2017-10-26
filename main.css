@@ -1,3 +1,21 @@
 h1 {
   text-align: center;
 }
+
+img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+}
+
+.point {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+}
