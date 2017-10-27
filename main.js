@@ -15,11 +15,11 @@ var mainVM = new Vue({
         pointY: event.offsetY-3 + 'px',
       })
     },
-    removePoints: function(event) {
-      console.log('removed')
-      
-    }
 
+    removePoints: function(point, index) {
+      console.log(index)
+      mainVM.points.splice(index, 1)
+    }
 
 
 

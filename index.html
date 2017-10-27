@@ -15,16 +15,25 @@
 
   <div id="app">
     <div class="container">
+    <!-- holds the map img and calls makePoints-->
       <img src=/coMap.jpg v-on:click="makePoints"/>
-      <div v-for="point in points"
+
+    <!-- renders the point -->
+      <div v-for="(point, index) in points"
         class="point"
-        v-bind:style="{left: point.pointX, top: point.pointY}" v-on:click="removePoints">
+        v-bind:style="{left: point.pointX, top: point.pointY}"
+        v-on:click="removePoints(point, index)"
+        >
       </div>
-    </div>
+
+    <!-- remove the point -->
+      <div v-on:click="removePoints">
+      </div>
 
 
 
 
+    </div> <!-- end of container div -->
   </div>  <!-- end of app div -->
 <!-- js file -->
   <script src="/main.js"></script>
